@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  web:
+    build:
+      context: ../frontend/app/web
+    ports:
+      - "5000:5000"
+    container_name: "app-web"
+    volumes:
+      - ../frontend/app/web:/app:delegated
+    networks:
+      - web
+
+networks:
+  web:
+    name: web
+    driver: bridge

@@ -1,0 +1,12 @@
+{
+    "name": "docker-frontend-app-web",
+    "version": "1.0.0",
+    "description": "Frontend application - web",
+    "author": "fifijo",
+    "license": "MIT",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fifijo/docker-frontend.git"
+    }
+}
