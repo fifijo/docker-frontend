@@ -7,7 +7,7 @@ services:
     environment:
       - NODE_ENV=development
     ports:
-      - "5000:5000"
+      - "3000:3000"
     container_name: "web"
     volumes:
       - /app/node_modules
