@@ -4,10 +4,13 @@ services:
   web:
     build:
       context: ../frontend/app/web
+    environment:
+      - NODE_ENV=development
     ports:
       - "5000:5000"
-    container_name: "app-web"
+    container_name: "web"
     volumes:
+      - /app/node_modules
       - ../frontend/app/web:/app:delegated
     networks:
       - web
