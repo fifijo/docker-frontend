@@ -1,0 +1,19 @@
+# Stage 0
+# Frontend build based on Node.js
+FROM node:12.20.0-alpine as build-stage
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+#ENV PATH /usr/src/app/node_modules/.bin:$PATH
+COPY frontend/app/web/package*.json /usr/src/app/
+RUN npm install
+# COPY ./ ./
+# RUN npm run build
+EXPOSE 3000
+USER node
+#CMD ["npm", "run", "start"]
+#COPY package*.json /usr/src/app/package.json
+#RUN npm install
+#COPY . /usr/src/app
+#RUN CI=true npm test
+#RUN npm run build
+
