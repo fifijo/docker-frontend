@@ -6,7 +6,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = merge(common, {
     mode: 'production',
     entry: {
-      app: 'client/index.js'
+      app: './client/index.js'
     },
     output: {
         path: path.resolve(__dirname, '../../build'),
