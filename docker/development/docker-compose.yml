@@ -1,0 +1,10 @@
+services:
+  nginx:
+    build:
+      context: ../../.
+      dockerfile: docker/development/Dockerfile
+    ports:
+      - 80:80
+    volumes:
+      - ../../server/nginx/development:/etc/nginx/conf.d
+      - ../../frontend/app/web:/frontend/app/web:delegated

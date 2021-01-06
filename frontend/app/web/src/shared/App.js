@@ -1,4 +1,4 @@
-const App = () => ('Hello world Test 3')
+const App = () => ('Hello world')
 
 App.displayName = 'App'
 
