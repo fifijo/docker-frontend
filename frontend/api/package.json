@@ -1,0 +1,24 @@
+{
+    "name": "docker-frontend-api",
+    "version": "1.0.0",
+    "description": "Frontend API",
+    "author": "fifijo - Krzysztof Perzanowski",
+    "license": "MIT",
+    "main": "server.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fifijo/docker-frontend.git"
+    },
+    "scripts": {
+        "start": "node server.js",
+        "dev": "node server.js"
+    },
+    "dependencies": {
+        "body-parser": "1.19.0",
+        "cors": "2.8.5",
+        "express": "4.17.1"
+    },
+    "devDependencies": {
+        "nodemon": "2.0.7"
+    }
+}

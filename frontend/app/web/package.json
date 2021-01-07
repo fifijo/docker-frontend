@@ -2,7 +2,7 @@
     "name": "docker-frontend-app-web",
     "version": "1.0.0",
     "description": "Frontend application - web",
-    "author": "fifijo",
+    "author": "fifijo - Krzysztof Perzanowski",
     "license": "MIT",
     "main": "index.js",
     "repository": {
