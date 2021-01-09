@@ -8,22 +8,13 @@ services:
     ports:
       - 80:80
     volumes:
-      - ../../../server/nginx/development:/etc/nginx/conf.d
-      - ../../../../frontend/app/web:/frontend/app/web:delegated
-    depends_on:
-      - api
-
+      - ../../server/nginx/development:/etc/nginx/conf.d
+      - ../../frontend/app/web:/frontend/app/web:delegated
   api:
     build:
       context: ../../.
       dockerfile: docker/development/frontend/api/Dockerfile
     volumes:
       - ../../../../frontend/api:/frontend/api:delegated
-    networks:
-      - networkappdevelopment
     expose:
-      - 8000
-
-networks:
-  networkappdevelopment:
-    driver: bridge
+      - 7000

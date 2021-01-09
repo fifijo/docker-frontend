@@ -21,5 +21,8 @@ module.exports = merge(common, {
         path: path.resolve( __dirname, '../../build' ),
         publicPath: '/',
         filename: '[name].bundle.js',
+    },
+    devServer: {
+        port: 9000
     }
 })
