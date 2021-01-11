@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  api:
+    image: api
+    build: frontend/api
+    volumes:
+      - ./frontend/api/:/app:delegated
+    networks:
+      - front
+      - back
+  web:
+    image: web
+    build: frontend/app/web
+    volumes:
+      - ./frontend/app/web:/app:delegated
+    restart: always
+    depends_on:
+      - api
+    networks:
+      - front
+  proxy:
+    image: proxy
+    build: proxy
+    volumes:
+      - ./proxy/default.conf:/etc/nginx/conf.d/default.conf
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - api
+    networks:
+      - front
+      - docker-network
+
+networks:
+  front:
+    driver: bridge
+  back:
+    driver: bridge
+  docker-network:
+    driver: bridge
